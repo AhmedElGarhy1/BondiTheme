@@ -1,0 +1,223 @@
+:root {
+  --dark: #19283f;
+  --green: #33d1cc;
+  --red: #ff3150;
+  --yellow: #ffc400;
+  --section: #eff7fa;
+  --transition: 0.3s;
+}
+body {
+  font-family: "Roboto", sans-serif;
+}
+.black-hover:hover {
+  background-color: var(--dark);
+}
+
+.main-btn {
+  background-color: var(--red);
+  color: var(--yellow);
+  transition: var(--transition);
+  padding: 0.5rem 1rem;
+}
+.main-btn:hover {
+  transform: scale(1.1);
+  color: var(--yellow);
+}
+
+.main-title::before {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 2px;
+  background-color: var(--green);
+}
+/* start navbar */
+.navbar {
+  background-color: var(--dark);
+}
+
+.navbar .nav-item .nav-link {
+  color: white;
+}
+
+.navbar .nav-item .nav-link.active,
+.navbar .nav-item .nav-link:focus,
+.navbar .nav-item .nav-link:hover {
+  color: var(--green) !important;
+}
+
+.navbar .search {
+  border-left: 1px solid var(--green);
+}
+.navbar .search svg {
+  color: var(--green);
+}
+
+.navbar .navbar-toggler {
+  color: white;
+  border: 1px solid white;
+  font-size: 25px;
+}
+.navbar .navbar-toggler:focus {
+  box-shadow: none;
+}
+/* end navbar */
+
+/* start landing */
+.landing {
+  height: calc(100vh - 72px);
+  background-image: url(../imgs/landing.jpg);
+  width: 100%;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+}
+.landing .text-center {
+  z-index: 10;
+}
+.landing::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(17, 17, 17, 0.562);
+}
+/* end landing */
+
+/* start features */
+
+.features .icons-holder {
+  height: 200px;
+}
+.features .icons-holder svg {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.features .icons-holder .number {
+  color: var(--section);
+  font-size: 12rem;
+}
+
+.features .icons-holder .icon {
+  font-size: 4rem;
+  color: var(--green);
+}
+.feat h3 {
+  color: var(--yellow);
+}
+/* end features */
+/* start outWorkd */
+.our-work {
+  background-color: var(--section);
+}
+.our-work ul li {
+  padding: 0.5rem 1rem;
+}
+.our-work ul li:not(.active) {
+  cursor: pointer;
+}
+.our-work ul li:not(.active):hover {
+  color: var(--green);
+}
+.our-work ul .active {
+  color: var(--yellow);
+  background-color: var(--red);
+  border-radius: 3rem;
+}
+.our-work .box {
+  overflow: hidden;
+  padding: 5px;
+}
+
+.our-work .box::before {
+  content: attr(data-work);
+  position: absolute;
+  width: calc(100% - 10px);
+  height: calc(100% - 10px);
+  background-color: #19283fb9;
+  color: white;
+  font-size: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: var(--transition);
+  transform: translateX(calc(-100% - 10px));
+}
+
+.our-work .box:hover::before {
+  transform: translateX(0);
+}
+/* end outWorkd */
+
+/* start about us */
+.about-us .info p {
+  max-width: 500px;
+}
+/* end about us */
+/* start ourTeam */
+.our-team {
+  background-color: var(--section);
+}
+
+.our-team .header h2 {
+  color: var(--yellow);
+}
+.our-team .feat h4 {
+  background-color: var(--green);
+  color: white;
+}
+/* end ourTeam */
+/* start project section  */
+.project {
+  background-color: var(--dark);
+}
+/* end project section  */
+/* start email section */
+.email {
+  background-color: var(--yellow);
+}
+.email input[type="text"] {
+  border: none;
+  background-color: transparent;
+}
+.email input[type="text"]:focus {
+  outline: none;
+}
+.email ::placeholder {
+  color: white;
+}
+.email .temp-btn {
+  background-color: var(--dark);
+  color: var(--yellow);
+  transition: var(--transition);
+}
+.email .temp-btn:hover {
+  transform: scale(1.1);
+}
+/* end email section */
+/* start fotter section  */
+footer.footer {
+  background-color: var(--dark);
+}
+.copyright div div span {
+  color: var(--yellow);
+}
+.facebook {
+  background-color: #1877f2;
+}
+.twitter {
+  background-color: #1da1f2;
+}
+.linkedin {
+  background-color: #0077b5;
+}
+.youtube {
+  background-color: #ff0000;
+}
+/* end fotter section  */
